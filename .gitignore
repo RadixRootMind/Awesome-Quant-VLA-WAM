@@ -1,0 +1,7 @@
+# OS / editor junk
+Thumbs.db
+.DS_Store
+*.tmp
+
+# Local source exports (canonical copies already live in assets/)
+*.png.png

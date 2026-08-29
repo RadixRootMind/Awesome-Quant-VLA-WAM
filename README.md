@@ -75,13 +75,19 @@ The repository is under active development; the current focus is research reprod
 
 ## Core Concepts
 
-> [!NOTE]
-> **What makes VLA quantization its own problem.** A VLA is a policy $\pi_\theta(a \mid o, l)$ mapping an observation $o$ and instruction $l$ to an action $a$, trained by an imitation objective
-> $$\mathcal{L}_{\text{VLA}} = \mathbb{E}_{(o,l,a)\sim\mathcal{D}}\big[\,\ell\big(\pi_\theta(o, l),\, a\big)\big],$$
-> where $\ell$ is a cross-entropy over discretized action tokens for autoregressive VLAs (RT-2, OpenVLA) — the special case $-\log \pi_\theta(a \mid o, l)$ — or a flow-matching / diffusion denoising loss for continuous-action VLAs (π0, HybridVLA).
-> Numerical PTQ for LLMs / DiTs picks a low-bit $\hat\theta$ by minimizing a differentiable **surrogate** — typically the layer-output error $\min_{\hat\theta}\mathbb{E}_x\lVert f_\theta(x)-f_{\hat\theta}(x)\rVert_2^2$. A robot, however, is judged by **executed behavior**. What we ultimately want is the highest closed-loop task success under a bit budget,
-> $$\max_{\hat\theta}\; \mathbb{E}_{\tau\sim\pi_{\hat\theta}}\big[\mathrm{Success}(\tau)\big]\qquad\text{s.t.}\qquad \bar b(\hat\theta)\le b,$$
-> but $\mathrm{Success}(\cdot)$ is non-differentiable and requires closed-loop rollouts, so methods optimize the surrogate and *hope* it transfers. Because each action changes future observations, a small per-layer error can compound across a rollout into trajectory failure — **low reconstruction error does not imply high task success.** Closing this surrogate-to-success gap is what the whole list is organized around.
+**What makes VLA quantization its own problem.** A VLA is a policy $\pi_\theta(a \mid o, l)$ mapping an observation $o$ and instruction $l$ to an action $a$, trained by an imitation objective
+
+$$
+\mathcal{L}_{\text{VLA}} = \mathbb{E}_{(o,l,a)\sim\mathcal{D}}\big[\,\ell\big(\pi_\theta(o, l),\, a\big)\big],
+$$
+
+where $\ell$ is a cross-entropy over discretized action tokens for autoregressive VLAs (RT-2, OpenVLA) — the special case $-\log \pi_\theta(a \mid o, l)$ — or a flow-matching / diffusion denoising loss for continuous-action VLAs (π0, HybridVLA). Numerical PTQ for LLMs / DiTs picks a low-bit $\hat\theta$ by minimizing a differentiable **surrogate** — typically the layer-output error $\min_{\hat\theta}\mathbb{E}_x\lVert f_\theta(x)-f_{\hat\theta}(x)\rVert_2^2$. A robot, however, is judged by **executed behavior**. What we ultimately want is the highest closed-loop task success under a bit budget,
+
+$$
+\max_{\hat\theta}\; \mathbb{E}_{\tau\sim\pi_{\hat\theta}}\big[\mathrm{Success}(\tau)\big]\qquad\text{s.t.}\qquad \bar b(\hat\theta)\le b,
+$$
+
+but $\mathrm{Success}(\cdot)$ is non-differentiable and requires closed-loop rollouts, so methods optimize the surrogate and *hope* it transfers. Because each action changes future observations, a small per-layer error can compound across a rollout into trajectory failure — **low reconstruction error does not imply high task success.** Closing this surrogate-to-success gap is what the whole list is organized around.
 
 The list separates five coupled concepts. Each row's exemplar is the canonical starting point for that thread.
 

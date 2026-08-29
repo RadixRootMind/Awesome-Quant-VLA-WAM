@@ -73,12 +73,6 @@ The repository is continuously updated as the field evolves. Contributions are h
 
 The repository is under active development; the current focus is research reproduction, quantized evaluation, and hardware-portability preparation. Large checkpoints, quantized packs, datasets, and generated benchmark outputs are intentionally kept **outside git**.
 
-**Day-one workflow**
-1. **Environment + assets** — create the conda environment; stage checkpoints and LIBERO assets *outside* the repository.
-2. **Plan** — run a profile with `--action plan` to verify paths, GPU selection, ports, checkpoints, and quantization mode.
-3. **Evaluate** — launch the selected VLA quantization route on a LIBERO suite.
-4. **Inspect** — read `merged_summary.json`, `merged_summary.md`, logs, rollouts, calibration files, packs, or QVLA proxy artifacts **before making any benchmark claim**.
-
 ## Core Concepts
 
 > [!NOTE]

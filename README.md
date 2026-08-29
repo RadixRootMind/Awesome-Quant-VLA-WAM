@@ -14,7 +14,7 @@
 [![Last Commit](https://img.shields.io/github/last-commit/RadixRootMind/Awesome-Quant-VLA-WAM)](https://github.com/RadixRootMind/Awesome-Quant-VLA-WAM/commits/main)
 
 <p align="center">
-  <img src="assets/roadmap.png" alt="Awesome VLA &amp; World-Action Model Quantization — Roadmap (2022 → 2026)" width="100%" style="border-radius: 15px; box-shadow: 0 4px 24px rgba(0,0,0,.1); margin: 5px 0;">
+  <img src="assets/teaser.jpg" alt="Awesome VLA &amp; WAM Quantization — from LLM/DiT baselines through VLA-specific PTQ/QAT and deployment to WAM extensions" width="100%" style="border-radius: 15px; box-shadow: 0 4px 24px rgba(0,0,0,.1); margin: 5px 0;">
 </p>
 
 *Compressing large embodied policies to low bit-widths — while keeping robots able to act.*

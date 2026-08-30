@@ -24,7 +24,7 @@
 </div>
 
 ## News
-- **2026-08** — 🔧 Companion toolkit **quant-vla** — an all-in-one VLA **PTQ + LIBERO evaluation** stack (QuantVLA · Ω-QVLA · QVLA/OpenVLA · OpenDriveLab/UniVLA-style routes under one launcher) — **open-sourcing imminent**.
+- **2026-08** — 🔧 Companion toolkit **quant-vla** — an all-in-one VLA **PTQ + LIBERO evaluation** stack (QuantVLA · Ω-QVLA · QVLA/OpenVLA · OpenDriveLab/UniVLA-style routes) — **planned open-source release**.
 - **2026-08** — Scope expanded to **World-Action Models (WAM)**: added the *Action Representation & WAM Extensions* category; the list now tracks **180+ papers**.
 - **2026-08** — Added a **Results / Leaderboard** scaffold and per-category comparison tables.
 - **2026-08** — Public release as *Awesome VLA & World-Action Model Quantization*.
@@ -67,9 +67,9 @@ The repository is continuously updated as the field evolves. Contributions are h
 ## Companion Toolkit: quant-vla
 
 > [!NOTE]
-> **🚧 Open-sourcing imminent.** `quant-vla` is our companion engineering stack for this list — it turns the surveyed methods into a runnable, reproducible pipeline. The repository link will go live here on release.
+> **🚧 Planned open-source release.** `quant-vla` is our companion engineering stack for this list — it turns the surveyed methods into a runnable, reproducible pipeline. The repository link will go live here on release — ⭐ **star & watch** this list to be notified.
 
-**quant-vla** is an open-source engineering stack for **Vision-Language-Action (VLA) post-training quantization** and **LIBERO evaluation**. It brings **QuantVLA**, **Ω-QVLA**, **QVLA / OpenVLA**, and **OpenDriveLab / UniVLA**-style routes into one repository with a **shared launcher**, shared asset conventions, and reproducible validation notes.
+**quant-vla** is our companion engineering stack for **Vision-Language-Action (VLA) post-training quantization** and **LIBERO evaluation**, slated for open-source release. It brings **QuantVLA**, **Ω-QVLA**, **QVLA / OpenVLA**, and **OpenDriveLab / UniVLA**-style routes into one repository with shared asset conventions and reproducible validation notes.
 
 The repository is under active development; the current focus is research reproduction, quantized evaluation, and hardware-portability preparation. Large checkpoints, quantized packs, datasets, and generated benchmark outputs are intentionally kept **outside git**.
 

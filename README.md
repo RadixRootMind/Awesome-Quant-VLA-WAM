@@ -14,12 +14,12 @@
 [![Last Commit](https://img.shields.io/github/last-commit/RadixRootMind/Awesome-Quant-VLA-WAM)](https://github.com/RadixRootMind/Awesome-Quant-VLA-WAM/commits/main)
 
 <p align="center">
-  <img src="assets/teaser.png" alt="Awesome VLA &amp; WAM Quantization — from LLM/DiT baselines through VLA-specific PTQ/QAT and deployment to WAM extensions" width="100%" style="border-radius: 15px; box-shadow: 0 4px 24px rgba(0,0,0,.1); margin: 5px 0;">
+  <img src="assets/fig3.png" alt="Awesome VLA &amp; WAM Quantization timeline — from general quantization baselines through VLA-specific PTQ/QAT and deployment to action and world-model quantization" width="100%" style="border-radius: 15px; box-shadow: 0 4px 24px rgba(0,0,0,.1); margin: 5px 0;">
 </p>
 
 *Compressing large embodied policies to low bit-widths — while keeping robots able to act.*
 
-<sub>Roadmap: transferred numerical baselines (2022–24) mature into VLA-specific PTQ/QAT (2024–25), then into deployment, action, and world-action quantization (2025–26). Placement is schematic; 2026 entries are author preprints.</sub>
+<sub>**Figure 3.** Chronological roadmap: transferred numerical baselines mature into VLA-specific PTQ/QAT, deployment, action-representation, and world-model quantization. Placement is schematic; 2026 entries are author preprints.</sub>
 
 </div>
 
@@ -129,6 +129,11 @@ The list separates five coupled concepts. Each row's exemplar is the canonical s
 
 > [!IMPORTANT]
 > **The through-line.** Categories 1→5 trace a single arc: **numerical methods borrowed from LLM/DiT/VLM (1)** are re-targeted from layer-output preservation to **action-space preservation (2–3)**, made deployable under real robot constraints **(4)**, and finally pushed into the **action and world-action representations themselves (5)**, where discretization and model precision become inseparable.
+
+<p align="center">
+  <img src="assets/fig4.png" alt="Taxonomy of VLA and WAM quantization methods by optimization scope and fidelity level" width="100%">
+</p>
+<sub>**Figure 4.** The taxonomy mapped across two complementary axes: **optimization scope** (model → policy → embodied system) and **fidelity level** (numerical → action → behavior), with predictive fidelity shown as the conditional extension for WAM architectures.</sub>
 
 **Related surveys**
 - Vision-Language-Action (VLA) Models: Concepts, Progress, Applications and Challenges. [![arXiv](https://img.shields.io/badge/arXiv-2505.04769-b31b1b.svg)](https://arxiv.org/abs/2505.04769)
